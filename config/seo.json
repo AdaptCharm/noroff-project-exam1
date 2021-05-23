@@ -1,0 +1,17 @@
+{
+  "title": "Discover the most exotic travel destinations",
+  "titleTemplate": "%s | Easy Blog",
+  "defaultTitle": "Easy Blog",
+  "description": "We cover all the most exotic travel destinations around the world.",
+  "openGraph": {
+    "type": "website",
+    "locale": "en",
+    "url": "https://easy-blog.vercel.app",
+    "site_name": "EasyBlog"
+  },
+  "twitter": {
+    "handle": "@easyblog",
+    "site": "@easyblog",
+    "cardType": "summary_large_image"
+  }
+}

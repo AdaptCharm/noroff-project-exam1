@@ -1,0 +1,7 @@
+:root {
+  --color-link: hsla(222, 8%, 95%, 0.45);
+
+  --shadow-smallest: 0 0px 12px -6px rgba(0, 24, 40, 0.3);
+  --shadow-small: 0 0px 15px -6px rgba(0, 24, 40, 0.4);
+  --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
