@@ -1,21 +1,17 @@
 import React, {
   FC,
-  Children,
   useState,
   useRef,
-  useEffect,
-  isValidElement
+  useEffect
 } from 'react'
 
 import { useKeenSlider } from 'keen-slider/react'
 
 import { ArrowCircleLeftIcon, ArrowCircleRightIcon } from '@heroicons/react/solid'
 
-import { Button } from '@components/ui'
-
-import cn from 'classnames'
 import Link from 'next/link'
 import Image from 'next/image'
+import cn from 'classnames'
 
 import { GetAllPostsQuery } from '@wordpress/graphql-operations'
 
