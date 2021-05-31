@@ -44,14 +44,14 @@ const Footer: FC = () => {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {navigation.map((item) => (
-            <a href={item.href} key={item.name} className="text-gray-400 hover:text-gray-500">
+            <a href={item.href} key={item.name} className="text-gray-500 hover:text-black">
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
-          <p className="text-center text-base text-gray-400">&copy; {new Date().getFullYear()} Explore | Jamie Isaksen</p>
+          <p className="text-center text-gray-500">&copy; {new Date().getFullYear()} Explore | Jamie Isaksen</p>
         </div>
       </div>
     </footer>

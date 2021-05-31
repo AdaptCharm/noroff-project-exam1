@@ -111,7 +111,7 @@ const Navbar: FC = () => {
                         </div>
                         <div className="flex items-center">
                           <div className="relative">
-                            <Popover.Button className="flex items-center justify-center bg-transparent rounded-md w-10 h-10 border-none transition ease-default duration-400 text-gray-700 hover:p-2 hover:bg-link hover:shadow-small focus:outline-none">
+                            <Popover.Button className="flex items-center justify-center bg-transparent rounded-md w-10 h-10 border-none transition ease-default duration-400 text-gray-900 hover:opacity-60 hover:p-2 hover:shadow-small focus:outline-none">
                               <span className="sr-only">Close menu</span>
                               <XIcon className="w-6 h-6" aria-hidden="true" />
                             </Popover.Button>
@@ -123,7 +123,7 @@ const Navbar: FC = () => {
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-4 gap-x-8">
                         {pages.map((page) => (
                           <Link href={page.href} key={page.name}>
-                            <a className="text-base font-normal text-gray-900 hover:text-gray-700 focus:outline-none focus:ring-transparent">
+                            <a className="text-base font-normal text-gray-900 hover:opacity-60 focus:outline-none focus:ring-transparent">
                               {page.name}
                             </a>
                           </Link>

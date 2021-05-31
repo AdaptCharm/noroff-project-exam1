@@ -1,17 +1,20 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  future: {
+    purgeLayersByDefault: true,
+  },
+  purge: {
+    content: [
+      './pages/**/*.{ts,tsx}',
+      './components/**/*.{ts,tsx}',
+    ],
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
         blue: colors.lightBlue,
-        sand: {
-          DEFAULT: '#dcd7cd',
-          light: '#ece7dc'
-        },
-        'link': 'var(--color-link)',
       },
       spacing: {
         '23': '5.5rem',
