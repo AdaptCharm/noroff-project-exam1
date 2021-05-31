@@ -1,7 +1,31 @@
+import type {
+  GetStaticPropsContext,
+  InferGetStaticPropsType
+} from 'next'
+
 import { Layout } from '@components/common'
 import { Feature } from '@components/ui'
+import { PostCard, PostSlider } from '@components/post'
 
-export default function Home() {
+import { getAllPosts } from '@wordpress/post'
+
+export const getStaticProps = async ({
+  preview = false
+}: GetStaticPropsContext) => {
+  const allPosts = await getAllPosts(preview)
+
+  return {
+    props: {
+      allPosts
+    }
+  }
+}
+
+const Home = ({
+  allPosts: { edges }
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const posts = edges
+
   return (
     <>
       <Feature
@@ -33,8 +57,12 @@ export default function Home() {
           altText: "Boracay's famous white sand beach"
         }}
       />
+      <PostSlider posts={posts} />
+      {posts.length > 0 && <PostCard posts={posts.slice(3, 6)} />}
     </>
   )
 }
+
+export default Home
 
 Home.Layout = Layout

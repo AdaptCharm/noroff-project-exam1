@@ -1,114 +1,108 @@
-import { Layout } from '@components/common'
-import {
-  InboxIcon,
-  SparklesIcon,
-} from '@heroicons/react/outline'
+import { NextSeo } from 'next-seo'
 
-export default function About() {
+import { Layout } from '@components/common'
+
+const About = () => {
   return (
     <>
-      <div className="relative pt-16 pb-32 overflow-hidden">
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100" />
-        <div className="relative">
-          <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-            <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
-              <div>
-                <div>
-                  <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                    <InboxIcon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </span>
-                </div>
-                <div className="mt-6">
-                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                    Stay on top of customer support
-                    </h2>
-                  <p className="mt-4 text-lg text-gray-500">
-                    Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
-                    porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at.
-                    Lectus viverra dui tellus ornare pharetra.
-                    </p>
-                  <div className="mt-6">
-                    <a
-                      href="#"
-                      className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
-                    >
-                      Get started
-                      </a>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-8 border-t border-gray-200 pt-6">
-                <blockquote>
-                  <div>
-                    <p className="text-base text-gray-500">
-                      &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean
-                      curabitur donec aliquet. Mi venenatis in euismod ut.&rdquo;
-                      </p>
-                  </div>
-                  <footer className="mt-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="flex-shrink-0">
-                        <img
-                          className="h-6 w-6 rounded-full"
-                          src="/maldives-col-1.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <div className="text-base font-medium text-gray-700">
-                        Marcia Hill, Digital Marketing Manager
-                        </div>
-                    </div>
-                  </footer>
-                </blockquote>
-              </div>
-            </div>
-            <div className="mt-12 sm:mt-16 lg:mt-0">
-              <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                <img
-                  className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                  src="/steps.jpeg"
-                  alt="Inbox user interface"
-                />
-              </div>
+      <NextSeo
+        title="About"
+        description="Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at."
+      />
+      <div className="py-16 xl:py-36 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+        <div className="max-w-max lg:max-w-7xl mx-auto">
+          <div className="relative z-10 mb-8 md:mb-2 md:px-6">
+            <div className="text-base max-w-prose lg:max-w-none">
+              <h2 className="leading-6 text-black font-semibold tracking-wide uppercase">About</h2>
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                What makes us different
+            </p>
             </div>
           </div>
-        </div>
-        <div className="mt-24">
-          <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-            <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
-              <div>
-                <div>
-                  <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                    <SparklesIcon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </span>
+          <div className="relative">
+            <svg
+              className="hidden md:block absolute top-0 right-0 -mt-20 -mr-20"
+              width={404}
+              height={384}
+              fill="none"
+              viewBox="0 0 404 384"
+              aria-hidden="true"
+            >
+              <defs>
+                <pattern
+                  id="95e8f2de-6d30-4b7e-8159-f791729db21b"
+                  x={0}
+                  y={0}
+                  width={20}
+                  height={20}
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                </pattern>
+              </defs>
+              <rect width={404} height={384} fill="url(#95e8f2de-6d30-4b7e-8159-f791729db21b)" />
+            </svg>
+            <svg
+              className="hidden md:block absolute bottom-0 left-0 -mb-20 -ml-20"
+              width={404}
+              height={384}
+              fill="none"
+              viewBox="0 0 404 384"
+              aria-hidden="true"
+            >
+              <defs>
+                <pattern
+                  id="7a00fe67-0343-4a3c-8e81-c145097a3ce0"
+                  x={0}
+                  y={0}
+                  width={20}
+                  height={20}
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                </pattern>
+              </defs>
+              <rect width={404} height={384} fill="url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)" />
+            </svg>
+            <div className="relative md:bg-white md:p-6">
+              <div className="lg:grid lg:grid-cols-2 lg:gap-6">
+                <div className="prose prose-indigo prose-lg text-gray-500 lg:max-w-none">
+                  <p>
+                    Ultrices ultricies a in odio consequat egestas rutrum. Ut vitae aliquam in ipsum. Duis nullam placerat
+                    cursus risus ultrices nisi, vitae tellus in. Qui non fugiat aut minus aut rerum. Perspiciatis iusto
+                    mollitia iste minima soluta id.
+                </p>
+                  <p>
+                    Erat pellentesque dictumst ligula porttitor risus eget et eget. Ultricies tellus felis id dignissim
+                    eget. Est augue maecenas risus nulla ultrices congue nunc tortor. Eu leo risus porta
+                    integer suspendisse sed sit ligula elit.
+                </p>
+                  <ol>
+                    <li>Integer varius imperdiet sed interdum felis cras in nec nunc.</li>
+                    <li>Quam malesuada odio ut sit egestas. Elementum at porta vitae.</li>
+                  </ol>
+                  <p>
+                    Amet, eu nulla id molestie quis tortor. Auctor erat justo, sed pellentesque scelerisque interdum
+                    blandit lectus. Nec viverra amet ac facilisis vestibulum. Vestibulum purus nibh ac ultricies congue.
+                </p>
                 </div>
-                <div className="mt-6">
-                  <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                    Better understand your customers
-                    </h2>
-                  <p className="mt-4 text-lg text-gray-500">
-                    Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
-                    porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at.
-                    Lectus viverra dui tellus ornare pharetra.
-                    </p>
-                  <div className="mt-6">
-                    <a
-                      href="#"
-                      className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
-                    >
-                      Get started
-                      </a>
-                  </div>
+                <div className="mt-6 prose prose-indigo prose-lg text-gray-500 lg:mt-0">
+                  <p>
+                    Erat pellentesque dictumst ligula porttitor risus eget et eget. Ultricies tellus felis id dignissim
+                    eget. Est augue maecenas risus nulla ultrices congue nunc tortor.
+                </p>
+                  <p>
+                    Eu leo risus porta integer suspendisse sed sit ligula elit. Elit egestas lacinia sagittis pellentesque
+                    neque dignissim vulputate sodales. Diam sed mauris felis risus, ultricies mauris netus tincidunt.
+                    Mauris sit eu ac tellus nibh non eget sed accumsan. Viverra ac sed venenatis pulvinar elit. Cras diam
+                    quis tincidunt lectus. Non mi vitae, scelerisque felis nisi, netus amet nisl.
+                </p>
+                  <p>
+                    Eu eu mauris bibendum scelerisque adipiscing et. Justo, elementum consectetur morbi eros, posuere
+                    ipsum tortor. Eget cursus massa sed velit feugiat sed ut. Faucibus eros mauris morbi aliquam nullam.
+                    Scelerisque elementum sit magna ullamcorper dignissim pretium.
+                </p>
                 </div>
-              </div>
-            </div>
-            <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-              <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                <img
-                  className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                  src="/maldives-col-2.jpg"
-                  alt="Customer profile user interface"
-                />
               </div>
             </div>
           </div>
@@ -117,5 +111,7 @@ export default function About() {
     </>
   )
 }
+
+export default About
 
 About.Layout = Layout

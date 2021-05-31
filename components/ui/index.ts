@@ -1,3 +1,6 @@
 export { default as Logo } from './Logo'
 export { default as Feature } from './Feature'
-export { default as Holiday } from './Holiday'
+export { default as Alert } from './Alert'
+export { default as Button } from './Button'
+export { default as Input } from './Input'
+export { default as Textarea } from './Textarea'

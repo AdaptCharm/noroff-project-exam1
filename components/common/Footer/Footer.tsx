@@ -51,7 +51,7 @@ const Footer: FC = () => {
           ))}
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
-          <p className="text-center text-base text-gray-400">&copy; {new Date().getFullYear()} EasyBlog. All rights reserved.</p>
+          <p className="text-center text-base text-gray-400">&copy; {new Date().getFullYear()} Explore | Jamie Isaksen</p>
         </div>
       </div>
     </footer>

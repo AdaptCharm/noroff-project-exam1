@@ -31,6 +31,7 @@ module.exports = {
       boxShadow: {
         'smallest': 'var(--shadow-smallest)',
         'small': 'var(--shadow-small)',
+        'medium': 'var(--shadow-medium)',
         'large': 'var(--shadow-large)',
       },
       gridTemplateColumns: {
@@ -43,6 +44,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography')
   ]
 }

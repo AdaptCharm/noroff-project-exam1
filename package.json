@@ -7,7 +7,59 @@
     "build": "next build",
     "start": "next start",
     "analyze": "BUNDLE_ANALYZE=both yarn build",
-    "find:unused": "next-unused"
+    "prettier-fix": "prettier --write .",
+    "find:unused": "next-unused",
+    "generate": "graphql-codegen"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.2.0",
+    "@heroicons/react": "^1.0.1",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/typography": "^0.4.1",
+    "@tailwindcss/ui": "^0.7.2",
+    "autoprefixer": "^10.2.5",
+    "email-validator": "^2.0.4",
+    "keen-slider": "^5.4.1",
+    "next": "^10.2.2",
+    "next-seo": "^4.24.0",
+    "postcss": "^8.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hotjar": "^2.2.1",
+    "react-tippy": "^1.4.0",
+    "react-use-hotjar": "^1.1.2",
+    "tailwindcss": "^2.1.2"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.21.4",
+    "@graphql-codegen/schema-ast": "^1.18.3",
+    "@graphql-codegen/typed-document-node": "^1.18.5",
+    "@graphql-codegen/typescript": "^1.22.0",
+    "@graphql-codegen/typescript-operations": "^1.17.16",
+    "@graphql-typed-document-node/core": "^3.1.0",
+    "@types/classnames": "^2.3.1",
+    "@types/react": "^17.0.6",
+    "graphql": "^15.5.0",
+    "husky": "^6.0.0",
+    "next-unused": "^0.0.6",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.3.0",
+    "typescript": "^4.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "next-unused": {
     "alias": {
@@ -20,8 +72,8 @@
       "@components/*": [
         "components/*"
       ],
-      "@lib/*": [
-        "lib/*"
+      "@wordpress/*": [
+        "wordpress/*"
       ]
     },
     "debug": true,
@@ -33,29 +85,5 @@
     "entrypoints": [
       "pages"
     ]
-  },
-  "dependencies": {
-    "@headlessui/react": "^1.2.0",
-    "@heroicons/react": "^1.0.1",
-    "@tailwindcss/aspect-ratio": "^0.2.0",
-    "@tailwindcss/forms": "^0.3.2",
-    "@tailwindcss/ui": "^0.7.2",
-    "autoprefixer": "^10.2.5",
-    "embla-carousel": "^4.5.2",
-    "next": "^10.2.2",
-    "next-seo": "^4.24.0",
-    "postcss": "^8.2.13",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-tippy": "^1.4.0",
-    "tailwindcss": "^2.1.2"
-  },
-  "devDependencies": {
-    "@types/classnames": "^2.3.1",
-    "@types/react": "^17.0.5",
-    "next-unused": "^0.0.6",
-    "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-preset-env": "^6.7.0",
-    "typescript": "^4.2.4"
   }
 }

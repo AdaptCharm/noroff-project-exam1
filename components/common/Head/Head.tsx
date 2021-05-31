@@ -1,9 +1,14 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import NextHead from 'next/head'
 import { DefaultSeo } from 'next-seo'
 import config from '@config/seo.json'
+import { hotjar } from 'react-hotjar';
 
 const Head: FC = () => {
+  useEffect(() => {
+    hotjar.initialize(2425340, 6)
+  })
+
   return (
     <>
       <DefaultSeo {...config} />
@@ -14,8 +19,6 @@ const Head: FC = () => {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
-        <meta name="apple-mobile-web-app-title" content="EasyBlog" />
-        <meta name="application-name" content="EasyBlog" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />
       </NextHead>
