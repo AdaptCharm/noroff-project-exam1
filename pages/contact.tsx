@@ -13,14 +13,14 @@ const Contact = () => {
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
   const [alert, setAlert] = useState('')
-  const [notPassed, setNotPassed] = useState(false)
-  const [disabled, setDisabled] = useState(false)
+  const [isPassed, setIsPassed] = useState(false)
+  const [isDisabled, setIsDisabled] = useState(false)
 
   const handleContact = async (evt: React.SyntheticEvent<EventTarget>) => {
     evt.preventDefault()
 
-    if (!notPassed && !disabled) {
-      setNotPassed(true)
+    if (!isPassed && !isDisabled) {
+      setIsPassed(true)
       handleValidation()
     }
 
@@ -33,10 +33,10 @@ const Contact = () => {
 
 
   const handleValidation = useCallback(() => {
-    if (notPassed) {
-      setDisabled(name.length <= 5 || !validate(email) || subject.length <= 15 || message.length <= 25)
+    if (isPassed) {
+      setIsDisabled(name.length <= 5 || !validate(email) || subject.length <= 15 || message.length <= 25)
     }
-  }, [name, email, subject, message, notPassed])
+  }, [name, email, subject, message, isPassed])
 
   useEffect(() => {
     handleValidation()
