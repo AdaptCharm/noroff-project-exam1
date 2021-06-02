@@ -4,28 +4,25 @@ import type {
 } from 'next'
 import { NextSeo } from 'next-seo'
 
-import { Layout } from '@components/common'
-import { PostCard, PostView } from '@components/post'
+import { getAllPosts } from '@wordpress/api/post'
 
-import { getAllPosts, getPost } from '@wordpress/post'
+import { Layout } from '@components/common'
+import { PostCard } from '@components/post'
 
 export const getStaticProps = async ({
   preview = false
 }: GetStaticPropsContext) => {
   const allPosts = await getAllPosts(preview)
-  const post = await getPost('1')
 
   return {
     props: {
-      allPosts,
-      post
+      allPosts
     }
   }
 }
 
 const Blog = ({
-  allPosts: { edges },
-  post
+  allPosts: { edges }
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const posts = edges
 

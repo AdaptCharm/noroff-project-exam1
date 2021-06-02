@@ -6,11 +6,11 @@ import type {
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
 
+import { getPost, getAllPostsWithSlug } from '@wordpress/api/post'
+
 import { Layout } from '@components/common'
 import { Alert } from '@components/ui'
 import { PostView } from '@components/post'
-
-import { getPost, getAllPostsWithSlug } from '@wordpress/post'
 
 export const getStaticProps = async ({
   params
@@ -18,7 +18,7 @@ export const getStaticProps = async ({
   const post = await getPost(params!.slug)
 
   if (!post) {
-    throw new Error(`Post with slug '${params!.slug}' not found`)
+    throw new Error(`Post with path '${params!.slug}' not found`)
   }
 
   return {

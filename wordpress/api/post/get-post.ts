@@ -1,4 +1,4 @@
-import fetchAPI from '../api'
+import fetchAPI from '..'
 
 const getPost = async (slug: string) => {
   const data = await fetchAPI(/* GraphQL */ `

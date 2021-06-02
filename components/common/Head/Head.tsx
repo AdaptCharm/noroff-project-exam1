@@ -2,7 +2,7 @@ import { FC, useEffect } from 'react'
 import NextHead from 'next/head'
 import { DefaultSeo } from 'next-seo'
 import config from '@config/seo.json'
-import { hotjar } from 'react-hotjar';
+import { hotjar } from 'react-hotjar'
 
 const Head: FC = () => {
   useEffect(() => {
@@ -14,7 +14,6 @@ const Head: FC = () => {
       <DefaultSeo {...config} />
       <NextHead>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="preload" href="https://script.hotjar.com/font-hotjar_5.65042d.woff2" as="font" type="font/woff2" crossOrigin="true"></link>
         <link rel="manifest" href="/site.webmanifest" key="site-manifest" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

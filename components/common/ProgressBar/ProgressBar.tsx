@@ -1,4 +1,8 @@
-import { FC, useEffect, useState } from 'react'
+import {
+  FC,
+  useEffect,
+  useState
+} from 'react'
 
 const ProgressBar: FC = () => {
   const [hasScrolled, setHasScrolled] = useState(0)

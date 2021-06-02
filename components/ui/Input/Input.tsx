@@ -15,6 +15,7 @@ const Input: FC<Props> = ({
     if (onChange) {
       onChange(evt.target.value)
     }
+
     return null
   }
 

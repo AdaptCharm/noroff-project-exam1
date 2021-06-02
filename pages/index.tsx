@@ -3,11 +3,11 @@ import type {
   InferGetStaticPropsType
 } from 'next'
 
+import { getAllPosts } from '@wordpress/api/post'
+
 import { Layout } from '@components/common'
 import { Feature } from '@components/ui'
-import { PostCard, PostSlider } from '@components/post'
-
-import { getAllPosts } from '@wordpress/post'
+import { PostSlider, PostCard } from '@components/post'
 
 export const getStaticProps = async ({
   preview = false

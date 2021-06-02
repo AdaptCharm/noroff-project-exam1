@@ -1,4 +1,8 @@
-import { FC, ButtonHTMLAttributes, JSXElementConstructor } from 'react'
+import {
+  FC,
+  ButtonHTMLAttributes,
+  JSXElementConstructor
+} from 'react'
 import cn from 'classnames'
 
 export interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {

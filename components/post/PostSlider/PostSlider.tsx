@@ -39,23 +39,16 @@ const PostSlider: FC<Props> = ({ posts }) => {
       const touchXPos = evt.touches[0].pageX
       const touchXRadius = evt.touches[0].radiusX || 0
 
-      if (touchXPos - touchXRadius < 10 ||
-        touchXPos + touchXRadius > window.innerWidth - 10
-      )
+      if (touchXPos - touchXRadius < 10 || touchXPos + touchXRadius > window.innerWidth - 10) {
         evt.preventDefault()
+      }
     }
 
-    postSliderRef.current!.addEventListener(
-      'touchstart',
-      prevNavigation
-    )
+    postSliderRef.current!.addEventListener('touchstart', prevNavigation)
 
     return () => {
       if (postSliderRef.current) {
-        postSliderRef.current!.removeEventListener(
-          'touchstart',
-          prevNavigation
-        )
+        postSliderRef.current!.removeEventListener('touchstart', prevNavigation)
       }
     }
   }, [])

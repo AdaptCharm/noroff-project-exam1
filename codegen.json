@@ -1,13 +1,18 @@
 
 {
-  "schema": "https://noroff-explore.flywheelsites.com/graphql",
+  "schema": {
+    "https://noroff-explore.flywheelsites.com/graphql": {
+      "headers": {
+        "Authorization": "Basic Zmx5d2hlZWw6a3c4enY4Yjg1dmo3Z2p1Mg=="
+      }
+    }
+  },
   "documents": "./wordpress/**/*.ts",
   "generates": {
     "./wordpress/graphql-operations.ts": {
       "plugins": [
         "typescript",
-        "typescript-operations",
-        "typed-document-node"
+        "typescript-operations"
       ]
     },
     "./wordpress/schema.graphql": {

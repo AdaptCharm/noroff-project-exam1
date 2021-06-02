@@ -1,8 +1,19 @@
-import { FC, Fragment, useState } from 'react'
-import { Transition } from '@headlessui/react'
-import { CheckCircleIcon, ExclamationIcon, XCircleIcon, ExclamationCircleIcon } from '@heroicons/react/outline'
-import { XIcon } from '@heroicons/react/solid'
+import {
+  FC,
+  Fragment,
+  useState
+} from 'react'
 import cn from 'classnames'
+
+import { Transition } from '@headlessui/react'
+
+import {
+  CheckCircleIcon,
+  ExclamationIcon,
+  XCircleIcon,
+  ExclamationCircleIcon
+} from '@heroicons/react/outline'
+import { XIcon } from '@heroicons/react/solid'
 
 interface Props {
   className?: string
@@ -17,20 +28,20 @@ const Alert: FC<Props> = ({
   message,
   type = 'success',
 }) => {
-  const [show, setShow] = useState(true)
+  const [isDisplayed, setIsDisplayed] = useState(true)
 
   return (
     <div aria-live="assertive" className={cn(
       'fixed z-50 inset-0 flex items-end px-4 py-6 pointer-events-none sm:p-6 sm:items-start',
       className
     )}>
-      {show ? (
+      {isDisplayed ? (
         <div className="fixed min-h-screen inset-0 bg-white bg-opacity-90 transition-opacity" />
       ) : ''}
 
       <div className="relative w-full flex flex-col items-center space-y-4 sm:items-end">
         <Transition
-          show={show}
+          show={isDisplayed}
           as={Fragment}
           enter="transform ease-out duration-300 transition"
           enterFrom="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
@@ -67,9 +78,9 @@ const Alert: FC<Props> = ({
                 </div>
                 <div className="ml-4 flex-shrink-0 flex">
                   <button
-                    className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sand focus:border-sand"
+                    className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-transparent"
                     onClick={() => {
-                      setShow(false)
+                      setIsDisplayed(false)
                     }}
                   >
                     <span className="sr-only">Close</span>

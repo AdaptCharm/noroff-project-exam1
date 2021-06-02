@@ -2870,7 +2870,7 @@ input CreateUserInput {
   email: String
 
   """
-  The user's first name.
+  	The user's first name.
   """
   firstName: String
 
@@ -9049,7 +9049,7 @@ input RegisterUserInput {
   email: String
 
   """
-  The user's first name.
+  	The user's first name.
   """
   firstName: String
 
@@ -16584,7 +16584,7 @@ input UpdateUserInput {
   email: String
 
   """
-  The user's first name.
+  	The user's first name.
   """
   firstName: String
 

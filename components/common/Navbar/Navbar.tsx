@@ -1,7 +1,7 @@
 import { FC, Fragment } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
-import { Logo } from '@components/ui'
+import { Explore } from '@components/icons'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Tooltip } from 'react-tippy'
 
@@ -45,7 +45,7 @@ const Navbar: FC = () => {
                   >
                     <Link href="/">
                       <a className="flex items-center gap-x-2">
-                        <Logo className="w-auto h-8 sm:h-10" />
+                        <Explore className="w-auto h-8 sm:h-10" />
                         <span>Explore</span>
                       </a>
                     </Link>
@@ -106,7 +106,7 @@ const Navbar: FC = () => {
                     <div className="pt-5 pb-6 px-5">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-x-2">
-                          <Logo className="w-auto h-8" />
+                          <Explore className="w-auto h-8" />
                           <span>Explore</span>
                         </div>
                         <div className="flex items-center">
